@@ -1411,7 +1411,7 @@ a.service-name:hover .company-badge {
 
 .label.disabled {
     color: #a8a8a8;
-}`,me=class extends i{configContext;metagoraContext;constructor(){super(`plain-catalogue-item`,pe),this.configContext=this.useContext(m.CONFIG,!0),this.metagoraContext=this.useContext(m.METAGORA,!0)}template(){let e=this.configContext.get(`IS_METAGORA`),t=this.metagoraContext.get(`agoras`).filter(e=>e.name===this.props.companyName)[0],n=`${e?t?.host:this.configContext.get(`API_HOST`)}${this.props.url}`;return e&&!t?this.html`
+}`,me=class extends i{configContext;metagoraContext;constructor(){super(`plain-catalogue-item`,pe),this.configContext=this.useContext(m.CONFIG,!0),this.metagoraContext=this.useContext(m.METAGORA,!0)}template(){let e=this.configContext.get(`IS_METAGORA`),t=e?(this.metagoraContext.get(`agoras`)||[]).find(e=>e.name===this.props.companyName):void 0,n=`${e?t?.host:this.configContext.get(`API_HOST`)}${this.props.url}`;return e&&!t?this.html`
             <span class="catalogue-item disabled" title="The page is not available">
                 <span class="icon disabled">${`
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
