@@ -621,7 +621,7 @@
    ======================================== */
 .mobile-header {
     padding: 8px 16px;
-    margin-top: calc(24px + 16px);
+    margin-top: 16px;
     box-sizing: border-box;
 
     height: 56px;
@@ -2825,6 +2825,7 @@ ul {
 @media (max-width: 768px) {
     .carousel-container {
         max-width: 100%;
+        max-height: 40vh;
     }
 
     .content {
