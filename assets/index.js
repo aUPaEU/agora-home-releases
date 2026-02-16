@@ -621,7 +621,7 @@
    ======================================== */
 .mobile-header {
     padding: 8px 16px;
-    margin-top: calc(56px + 16px);
+    margin-top: calc(24px + 16px);
     box-sizing: border-box;
 
     height: 56px;
@@ -782,6 +782,7 @@
         transform: translateX(0);
         box-shadow: 4px 0 24px rgba(0, 0, 0, 0.12);
         min-width: 100%;
+        z-index: 50000;
     }
 
     /* DRAWER BACKDROP */
