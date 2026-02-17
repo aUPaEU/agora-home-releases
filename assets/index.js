@@ -318,6 +318,12 @@
     flex: 0 0 auto;
 }
 
+@media (max-width: 768px) {
+    .right-panel--header {
+        margin-top: 56px;
+    }
+}
+
 .right-panel--content {
     flex: 1;
     overflow-y: auto;
