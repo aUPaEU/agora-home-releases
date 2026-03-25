@@ -1876,7 +1876,7 @@ a.service-name:hover .company-badge {
         <line x1="12" y1="8" x2="12" y2="12"/>
         <line x1="12" y1="16" x2="12.01" y2="16"/>
     </svg>
-`};var ge=class extends i{companyContext;constructor(){super(`plain-nav-item`,ie),this.companyContext=this.useContext(`company`)}showTooltip(e){let t=e.currentTarget,n=t.querySelector(`.tooltip`);if(!n)return;let r=t.getBoundingClientRect();n.style.position=`fixed`,n.style.top=`${r.top-n.offsetHeight-8}px`,n.style.left=`${r.left+r.width/2-n.offsetWidth/2}px`,n.style.visibility=`visible`,n.style.opacity=`1`}hideTooltip(e){let t=e.currentTarget.querySelector(`.tooltip`);t&&(t.style.visibility=`hidden`,t.style.opacity=`0`)}template(){let e=this.props.mainUrl?this.html`
+`};var ge=class extends i{companyContext;constructor(){super(`plain-nav-item`,ie),this.companyContext=this.useContext(`company`)}showTooltip(e){let t=e.currentTarget,n=t.querySelector(`.tooltip`);if(!n)return;let r=t.getBoundingClientRect();n.style.position=`fixed`,n.style.top=`${r.top-n.offsetHeight-8}px`,n.style.left=`${r.left+r.width/2-n.offsetWidth/2}px`,n.style.visibility=`visible`,n.style.opacity=`1`}hideTooltip(e){let t=e.currentTarget.querySelector(`.tooltip`);t&&(t.style.visibility=`hidden`,t.style.opacity=`0`)}template(){console.log(`>>>>>>>> ${this.props.serviceDescription} // ${typeof this.props.serviceDescription}`);let e=this.props.mainUrl?this.html`
                 <a 
                     href="${this.props.mainUrl}" 
                     class="service-name navigable" 
@@ -1892,7 +1892,7 @@ a.service-name:hover .company-badge {
                          onmouseenter="this.getRootNode().host.showTooltip(event)" 
                          onmouseleave="this.getRootNode().host.hideTooltip(event)">
                         <span class="info-icon">${oe}</span>
-                        <div class="tooltip">${this.props.serviceDescription}</div>
+                        <div class="tooltip">${this.props.serviceDescription.trim()===``?`No description available`:this.props.serviceDescription}</div>
                     </div>
                 </div>
                 </a>`:this.html`<span class="service-name">
@@ -5018,7 +5018,6 @@ textarea.placeholder-hidden::placeholder {
     gap: 0.5rem;
 
     font-size: 14px;
-    font-weight: 600;
     color: #0f172a;
 }
 
